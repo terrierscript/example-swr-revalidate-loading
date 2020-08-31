@@ -8,7 +8,7 @@ export default function Home() {
   console.log(error)
   return (
     <div>
-      <div>{JSON.stringify(data, null, 2)}</div>
+      <div>{JSON.stringify(data, null, 2) || "(loading..)"}</div>
       <div>{isValidating ? "validating" : "not-validating"}</div>
       <button onClick={() => revalidate()}>revalidatae</button>
     </div>
